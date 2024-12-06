@@ -1,0 +1,61 @@
+# Laravel related files
+/vendor/
+/node_modules/
+/public/storage
+/storage/*.key
+.env
+.phpunit.result.cache
+Homestead.yaml
+Homestead.json
+.nitro/
+.vscode/
+
+# Ignore log files and databases
+/storage/logs/*.log
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+/storage/debugbar
+*.sqlite
+
+# Ignore compiled files
+/public/hot
+/public/storage
+/public/mix-manifest.json
+/public/css/*.css
+/public/js/*.js
+/public/images
+/public/favicon.ico
+/public/mix-manifest.json
+/public/assets/
+.env.*.backup
+
+# Ignore IDE and OS specific files
+.DS_Store
+Thumbs.db
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.bak
+*.backup
+*.log
+*.env
+npm-debug.log*
+yarn-error.log*
+
+# Laravel Sail
+docker-compose.override.yml
+
+# Node modules and packages
+node_modules/
+yarn.lock
+package-lock.json
+
+# Ignore PHPUnit test results
+.phpunit.result.cache
+phpunit.xml
+
+# Composer
+composer.phar
