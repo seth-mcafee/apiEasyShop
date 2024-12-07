@@ -23,7 +23,7 @@ class CartResource extends JsonResource
                     "name"=>$product->name,
                     "quantity"=>$product->pivot->quantity,
                     "price"=>$product->pivot->price,
-                    "image_url"=>url('/storage/'.$product->image_url)
+                    "image_url"=>$product->image_url
 
                 ];
             })
