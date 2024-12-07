@@ -28,7 +28,7 @@ class ProductResource extends JsonResource
                 "id" => $this->resource->category->id,
                 "name" => $this->resource->category->name
             ] : null,
-            'image_url' => url('/storage/'.$this->resource->image_url),
+            'image_url' => $this->resource->image_url,
             'created_at' => $this->resource->created_at->format("d-m-Y h:i:s")
         ];
     }
