@@ -31,12 +31,6 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile("image")){
-            $path = $request->file("image")->store("products","public");
-            $request->request->add([
-                "image_url"=> $path
-            ]);
-        }
         Product::create($request->all());
 
         return response()->json([
@@ -75,19 +69,6 @@ class ProductController extends Controller
             return response()->json([
                 "message" => "Product not found"
             ], 404);
-        }
-
-        if ($request->hasFile("image")) {
-            // Delete old image if exists
-            if ($product->image_url) {
-                Storage::delete($product->image_url);
-            }
-
-            // Store the new image
-            $path = Storage::putFile("products", $request->file("image"));
-            $request->request->add([
-                "image_url" => $path
-            ]);
         }
 
         $product->update($request->all());
